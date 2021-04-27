@@ -2,15 +2,15 @@ from task.antiderivative_calculations import find_antiderivative_with_gauss, fin
 from common.utils import summarize_range
 from math import pi, exp, sin, cos
 
-X0 = 2
-XN = 3
-N = 10
+X0 = 4
+XN = 6
+N = 5
 #H = (XN - X0) / N
-H = 0.1
+H = 0.4
 
-f = lambda x: 1/(cos(x) ** 2)
+f = lambda x: x**2/(x-1)
 #f = lambda x: exp(2 * x) * sin(x)
-fad = lambda x: (exp(2 * x) / 5) * (2 * sin(x) - cos(x))
+fad = lambda x: (x**2-2*x)/(x-1)*2
 
 print("Точное значение: ", fad(XN) - fad(X0))
 print("Метод прямоугольника(левый): ", find_antiderivative_with_left_rectangles(f, X0, H, N))

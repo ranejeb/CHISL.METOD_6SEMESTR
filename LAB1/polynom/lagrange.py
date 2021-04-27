@@ -19,7 +19,7 @@ def find_interval_end_index(Xs, x):
         if Xs[i] > x:
             return i
         else:
-            i += 1;
+            i += 1
     return i
 
 # метод Лагранжа

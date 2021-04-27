@@ -8,16 +8,16 @@ from polynom.lagrange import Ln, findError, omega;
 # я 8 в списке подгруппы
 # последняя цифра студенческого (зачётки) 5
 
-INPUT_VALUES = [1.27, 1.55, 1.94]
-X0 = 1
-XN = 2;
-H = 0.2
+INPUT_VALUES = [1.19, 3.41]
+X0 = 0
+XN = 5
+H = 1
 
 n1  = 2
-n2 = 3
+n2 = 4
 
 def F(x):
-    return log10(x) + (x + 1) ** 3
+    return 2*x+3*log(x+0.5)
     # return sin(x)
 
 print ("===================TABLE=====================")

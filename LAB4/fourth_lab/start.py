@@ -13,14 +13,14 @@ f1d = lambda x: 3 * x ** 2
 f2d = lambda x: 6 * x
 """
 
-H = 0.2
-X0 = -1
-XN = 0
-f1 = lambda x: x * exp(x) + x
+H = 0.5
+X0 = 3
+XN = 5
+f1 = lambda x: x/(x+1)**2
 # первая производная 
-f1d = lambda x: exp(x) + x * exp(x) + 1
+f1d = lambda x: (-x+1)/(x+1)**3
 # вторая производная
-f2d = lambda x: 2 * exp(x) + exp(x) * x
+f2d = lambda x: (2*x-4)/(x+1)**4
 
 def build_table(f, h, x1, x2):
     X = []
