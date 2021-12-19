@@ -1,16 +1,16 @@
 from task.antiderivative_calculations import find_antiderivative_with_gauss, find_antiderivative_with_left_rectangles, find_antiderivative_with_middle_rectangles, find_antiderivative_with_parabola, find_antiderivative_with_right_rectangles, find_antiderivative_with_trapezoid
 from common.utils import summarize_range
-from math import pi, exp, sin, cos
+from math import pi, exp, sin, cos, log
 
 X0 = 4
-XN = 6
-N = 5
+XN = 5
+N = 0.20
 #H = (XN - X0) / N
 H = 0.4
 
-f = lambda x: x**2/(x-1)
-#f = lambda x: exp(2 * x) * sin(x)
-fad = lambda x: (x**2-2*x)/(x-1)*2
+f = lambda x: (x**2)/(3*x-1)
+
+fad = lambda x: (x**2)/(3*x-1)
 
 print("Точное значение: ", fad(XN) - fad(X0))
 print("Метод прямоугольника(левый): ", find_antiderivative_with_left_rectangles(f, X0, H, N))

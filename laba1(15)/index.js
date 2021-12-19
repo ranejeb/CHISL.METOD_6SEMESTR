@@ -1,0 +1,7 @@
+const { table, f, fi, fi1, g, method1, method2, method3, method4, method5 } = require("./table")
+//table(0, 1)
+// method1(f, 0, 1, 0.001)
+// method2(1, f, g, 0.001)
+// method3(0, 1, f, 0.001)
+// method4(0.5, 1, f, 0.001)
+method5(1, fi, fi1, 0.001)

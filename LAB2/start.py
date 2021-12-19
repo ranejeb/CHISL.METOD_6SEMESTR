@@ -1,14 +1,15 @@
 from spline import calc_spline, find_interval_end_index
 from common.utils import format_number
 from math import log, pi as PI, sin, log
+import numpy as np
 
 X0 = 1
-XN = 2
-H = 0.2
+XN = 11
+H = 2
 INPUT_VALUES = [X0 + 0.3, X0 + 0.5 * H, XN - 0.5 * H]
 
 def F(x):
-    return log(x) + (x + 1) ** 3
+    return 5 * x - 8 * np.log(x) - 8
 
 print ("===================TABLE=====================")
 current = X0

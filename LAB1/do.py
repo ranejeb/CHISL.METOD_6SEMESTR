@@ -2,11 +2,7 @@ from polynom.newton import newton
 from common.utils import formatNumber
 from math import log, pi as PI, sin, log10
 from polynom.lagrange import Ln, findError, omega;
-# https://bugaga.net.ru/ege/math/ekstremum.html
 
-# я 16 в общем списке
-# я 8 в списке подгруппы
-# последняя цифра студенческого (зачётки) 5
 
 INPUT_VALUES = [1.19, 3.41]
 X0 = 0
